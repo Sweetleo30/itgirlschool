@@ -1,0 +1,465 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* ================================================================= */
+
+body {
+    font-family: "Open Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1176px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+/* ===========================Header====================================== */
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    min-height: 150px;
+    background: linear-gradient(90.45deg, #000000 -0.86%, #000000 10.37%, #000000 19.49%, #000000 28.74%, #000000 37.18%);
+}
+
+.header__container {
+    display: flex;
+    min-height: 150px;
+    align-items: center;
+}
+
+.header__menu {
+    flex: 1 1 auto;
+}
+
+.header__button {
+    flex: 0 0 148px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 60px 0px 0px;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    margin: 0px 50px 0px 0px;
+}
+
+.menu__link {
+    line-height: 160%;
+    color: #ffffff94;
+}
+
+.menu__link:hover {
+    color: #ffffff;
+}
+
+.button {
+    display: inline-block;
+    font-weight: 600;
+    line-height: 160%;
+    color: #FFFFFF;
+    padding: 16px 35px;
+    border-radius: 5px;
+    background-color: #FF4B32;
+}
+
+.button:hover {
+    background-color: #f3381f;
+}
+
+/* ===========================Title and text====================================== */
+
+.block-text__title {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0px 0px 20px 0px;
+    font-size: 43px;
+    color: #000000;
+}
+
+.block-text__text {
+    margin: 0px 0px 60px 0px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #000000;
+    opacity: 0.7;
+}
+
+.link {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FF4B32;
+}
+
+.link:hover {
+    color: #fd0808;
+}
+
+/* ===========================Hero====================================== */
+
+.hero {
+    background: linear-gradient(90.45deg, #000000 -0.86%, #000000 10.37%, #000000 19.49%, #000000 28.74%, #000000 37.18%);
+    padding: 70px 0px 40px 0px;
+}
+
+.hero__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero__content {
+    display: flex;
+    flex: 0 1 50%;
+    padding: 0px 0px 0px 20px;
+}
+
+.hero__text {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 524px;
+}
+
+.hero__image {
+    flex: 0 1 50%;
+}
+
+.hero__image img {
+    max-width: 100%;
+}
+
+.text__title {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 120%;
+    font-size: 58px;
+    color: #ffffff;
+}
+
+.text__text {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+/* =========================Offer======================================= */
+
+.offer {
+    padding: 70px 0px 80px 0px;
+}
+
+.offer__block-text {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 508px;
+}
+
+.offer__items {
+    display: flex;
+    max-width: 1156px;
+    margin: 0px auto;
+}
+
+.offer__item {
+    flex: 0 1 33.333%;
+}
+
+.item-offer {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 30px 0px;
+    margin: 0px 30px 30px 0px;
+}
+
+.item-offer__image {
+    margin: 0px 0px 35px 0px;
+}
+
+.item-offer__price {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.item-offer__title {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+    margin: 10px 0px 10px 0px;
+}
+
+.item-offer__text {
+    max-width: 257px;
+    font-size: 16px;
+    line-height: 160%;
+    opacity: 0.7;
+    margin: 10px 0px 30px 0px;
+}
+
+.offer__button {
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================Gallery======================================= */
+
+.gallery {
+    padding: 80px 0px 80px 0px;
+}
+
+.gallery__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.img-coffee {
+    margin: 0px 0px 5px 5px;
+}
+
+.gallery__block-text {
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.gallery__link {
+    margin: 40px 0px 0px 0px;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+/* =========================Follow======================================= */
+
+.follow {
+    background: linear-gradient(90.45deg, #000000 -0.86%, #000000 10.37%, #000000 19.49%, #000000 28.74%, #000000 37.18%);
+    padding: 70px 0px 40px 0px;
+    margin: 90px 0px 140px 0px;
+}
+
+.follow__title {
+    margin: 100px 0px 40px 0px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #FF4B32;
+}
+
+.follow__text {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 43px;
+    line-height: 130%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.follow__contacts {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 300%;
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    margin: 15px 0px 15px 0px;
+}
+
+.tel {
+    color: #FFFFFF;
+}
+
+.email {
+    color: #FFFFFF;
+}
+
+.follow__social {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px 100px 0px;
+}
+
+.social__item {
+    padding: 0px 30px 0px 0px;
+}
+
+/* =========================News======================================= */
+
+.news__block-text {
+    text-align: center;
+    margin: 0px 0px 40px 0px;
+}
+
+.news__items {
+    display: flex;
+    max-width: 1146px;
+    margin: 0px auto;
+}
+
+.news__item {
+    flex: 0 1 33.333%;
+}
+
+.item-news {
+    flex-direction: column;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 40px 15px 136px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    padding: 0px 0px 30px 0px;
+    margin: 0px 30px 30px 0px;
+}
+
+.item-news__image {
+    margin: 0px 0px 30px 0px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.item-news__title {
+    font-family: "Josefin Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 130%;
+}
+
+.item-news__text {
+    font-size: 16px;
+    line-height: 160%;
+    opacity: 0.7;
+    margin: 20px 0px 30px 0px;
+}
+
+/* =========================Footer======================================= */
+
+.footer {
+    background: #0D0402;
+    padding: 70px 0px 50px 0px;
+    margin: 140px 0px 0px 0px;
+}
+
+.footer__main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__column {
+    flex: 0 1 25%;
+}
+
+.footer__text {
+    margin: 30px 0px 30px 0px;
+    padding: 0px 30px 0px 0px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+
+.footer__contacts {
+    line-height: 250%;
+}
+
+.footer__label {
+    font-size: 24px;
+    line-height: 150%;
+    color: #FFFFFF;
+    margin: 0px 0px 20px 0px;
+}
+
+.menu-footer__link {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 0px 20px 0px;
+    line-height: 150%;
+    color: #ffffffa6;
+}
+
+.menu-footer__link:hover {
+    color: #ffffff;
+}
+
+.footer__social {
+    display: flex;
+}
+
+.footer__copyright {
+    margin: 100px 0px 50px 0px;
+    text-align: center;
+    line-height: 160%;
+    color: #FFFFFF;
+}
