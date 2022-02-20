@@ -67,10 +67,7 @@ body {
 /* ===========================Header====================================== */
 
 .header {
-    position: absolute;
     width: 100%;
-    top: 0;
-    left: 0;
     min-height: 150px;
     background: linear-gradient(90.45deg, #000000 -0.86%, #000000 10.37%, #000000 19.49%, #000000 28.74%, #000000 37.18%);
 }
@@ -165,7 +162,7 @@ body {
 
 .hero {
     background: linear-gradient(90.45deg, #000000 -0.86%, #000000 10.37%, #000000 19.49%, #000000 28.74%, #000000 37.18%);
-    padding: 70px 0px 40px 0px;
+    padding: 10px 10px 40px 0px;
 }
 
 .hero__container {
@@ -177,7 +174,7 @@ body {
 .hero__content {
     display: flex;
     flex: 0 1 50%;
-    padding: 0px 0px 0px 20px;
+    padding: 0px 10px 10px 0px;
 }
 
 .hero__text {
@@ -194,7 +191,7 @@ body {
     max-width: 100%;
 }
 
-.text__title {
+.hero__title {
     font-family: "Josefin Sans", "Jost", sans-serif;
     font-style: normal;
     font-weight: bold;
@@ -203,7 +200,7 @@ body {
     color: #ffffff;
 }
 
-.text__text {
+.hero__text {
     font-weight: 600;
     font-size: 20px;
     line-height: 160%;
@@ -225,7 +222,6 @@ body {
 
 .offer__items {
     display: flex;
-    max-width: 1156px;
     margin: 0px auto;
 }
 
@@ -283,11 +279,16 @@ body {
 .gallery__content {
     display: flex;
     justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
 }
 
 .img-coffee {
-    margin: 0px 0px 5px 5px;
+    margin: 0px 0px 20px 20px;
+}
+
+.five {
+    margin: -100px 0px 0px 20px;
 }
 
 .gallery__block-text {
