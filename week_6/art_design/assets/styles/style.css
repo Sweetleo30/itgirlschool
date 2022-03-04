@@ -119,8 +119,6 @@ body {
     color: #FFFFFF;
 }
 
-.thread__link {}
-
 .link {
     position: absolute;
     top: 50%;
@@ -150,8 +148,6 @@ body {
     top: 30%;
     left: 15%;
 }
-
-.weaving__link {}
 
 .weaving__img {
     position: relative;
