@@ -97,7 +97,7 @@ body {
     display: grid;
     padding: 30px 15px;
     display: grid;
-    grid-template: 613fr 528fr 442fr 282fr / 1fr minmax(auto, 920px) 1fr;
+    grid-template: 613px 528px 442px 282px / 1fr minmax(auto, 920px) 1fr;
     gap: 20px;
 }
 
