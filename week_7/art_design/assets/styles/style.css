@@ -68,6 +68,27 @@ body {
     grid-template: 1fr / 1fr minmax(auto, 400px) minmax(auto, 520px) 1fr;
 }
 
+.header__logo {
+    grid-column: 2/3;
+}
+
+.header__list {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+}
+
+.header__link {
+    color: #949090;
+    font-family: Century Gothic;
+    line-height: 14px;
+    text-align: right;
+}
+
+.header__link:hover {
+    color: #f51717;
+}
+
 @media (min-width: 720px) and (max-width: 989px) {
     .header {
         grid-template: 1fr 1fr/ 1fr minmax(auto, 650px) 1fr;
@@ -115,27 +136,6 @@ body {
     }
 }
 
-.header__logo {
-    grid-column: 2/3;
-}
-
-.header__list {
-    display: grid;
-    grid-auto-flow: column;
-    justify-items: end;
-}
-
-.header__link {
-    color: #949090;
-    font-family: Century Gothic;
-    line-height: 14px;
-    text-align: right;
-}
-
-.header__link:hover {
-    color: #f51717;
-}
-
 /* ===========================main====================================== */
 
 .main {
@@ -148,6 +148,15 @@ body {
     gap: 20px;
 }
 
+.main img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media (min-width: 720px) and (max-width: 989px) {
     .main {
         grid-template: 600px 500px 1200px 800px / 1fr minmax(auto, 650px) 1fr;
@@ -158,15 +167,6 @@ body {
     .main {
         grid-template: 400px 400px 820px 1240px / 1fr minmax(auto, 450px) 1fr;
     }
-}
-
-.main img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 /* ===========================thread====================================== */
@@ -189,6 +189,25 @@ body {
     top: 40%;
     left: 49%;
     transform: translate(-50%, -60%);
+}
+
+.link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0.206928px;
+    color: #FFFFFF;
+}
+
+.link:hover {
+    color: #f51717;
+}
+
+.thread__img {
+    position: relative;
 }
 
 @media (min-width: 720px) and (max-width: 989px) {
@@ -217,31 +236,12 @@ body {
     }
 }
 
-.link {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    line-height: 31px;
-    letter-spacing: 0.206928px;
-    color: #FFFFFF;
-}
-
 @media (max-width: 719px) {
     .link {
         font-size: 18px;
         line-height: 25px;
         letter-spacing: 0.13px;
     }
-}
-
-.link:hover {
-    color: #f51717;
-}
-
-.thread__img {
-    position: relative;
 }
 
 /* ===========================weaving====================================== */
@@ -259,6 +259,10 @@ body {
     transform: translate(-19%, -60%);
 }
 
+.weaving__img {
+    position: relative;
+}
+
 @media (min-width: 720px) and (max-width: 989px) {
     .weaving__titlle {
         top: 40%;
@@ -273,10 +277,6 @@ body {
         left: 13%;
         transform: translate(0%, -60%);
     }
-}
-
-.weaving__img {
-    position: relative;
 }
 
 /* ===========================collection====================================== */
@@ -331,6 +331,16 @@ body {
     letter-spacing: 0.13px;
 }
 
+.exposition__img {
+    position: relative;
+}
+
+@media (min-width: 720px) and (max-width: 989px) {
+    .stretch {
+        grid-column: span 2;
+    }
+}
+
 @media (max-width: 719px) {
     .exposition__titlle {
         top: 42%;
@@ -347,16 +357,6 @@ body {
     }
 }
 
-.exposition__img {
-    position: relative;
-}
-
-@media (min-width: 720px) and (max-width: 989px) {
-    .stretch {
-        grid-column: span 2;
-    }
-}
-
 /* ===========================footer====================================== */
 
 .footer {
@@ -367,18 +367,6 @@ body {
     gap: 20px;
     padding: 0px 0px 20px 0px;
     margin: 110px 0px 0px 0px;
-}
-
-@media (min-width: 720px) and (max-width: 989px) {
-    .footer {
-        margin: 20px 0px 0px 0px;
-    }
-}
-
-@media (max-width: 719px) {
-    .footer {
-        margin: 20px 0px 0px 0px;
-    }
 }
 
 .footer__container {
@@ -393,4 +381,16 @@ body {
     line-height: 28px;
     letter-spacing: 0.38px;
     color: #333333;
+}
+
+@media (min-width: 720px) and (max-width: 989px) {
+    .footer {
+        margin: 20px 0px 0px 0px;
+    }
+}
+
+@media (max-width: 719px) {
+    .footer {
+        margin: 20px 0px 0px 0px;
+    }
 }
