@@ -1,0 +1,392 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* ================================================================= */
+
+body {
+    font-family: "Roboto Slab", "serif";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 160%;
+    color: #000000;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1290px;
+    margin: 0px auto;
+    padding: 0 15px;
+}
+
+.title {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Intro";
+    font-size: 60px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+@font-face {
+    font-family: "Intro";
+    src: local("Intro"),
+        url(/assets/fonts/Intro.ttf);
+}
+
+/* ===========================Header====================================== */
+
+.header__container {
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__button img {
+    margin: 0 5px;
+    vertical-align: baseline;
+}
+
+.header__button {
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.button {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    font-family: "Intro";
+    font-weight: 400;
+    color: #FFFFFF;
+    background: #5222D0;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #9570f1;
+}
+
+/* =========================Cover======================================= */
+
+.cover__container {
+    display: flex;
+    padding-left: 52px;
+}
+
+.cover__content {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 40%;
+    padding: 0 10px;
+}
+
+.button_big {
+    font-size: 35px;
+    line-height: 35px;
+    margin: 30px 0;
+    padding: 23px 33px;
+}
+
+.cover__button img {
+    margin: 0 10px;
+    vertical-align: baseline;
+}
+
+.cover__image {
+    flex: 0 1 60%;
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+    background-image: url(/assets/images/background.png);
+    background-position: right;
+}
+
+.cover__image img {
+    max-width: 100%;
+}
+
+/* =========================Footer======================================= */
+
+.footer__container {
+    display: flex;
+    align-items: center;
+    padding-left: 52px;
+}
+
+.footer__menu {
+    flex: 1 1 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 80px;
+}
+
+.menu__list {
+    display: flex;
+}
+
+.menu__item {
+    margin-right: 34px;
+}
+
+.menu__link {
+    color: #5222D0;
+}
+
+.menu__link:hover {
+    color: #9570f1;
+}
+
+/* =================================Page Opportunities======================================= */
+
+.opportunities__container {
+    padding-left: 28px;
+    margin-bottom: 86px;
+}
+
+.opportunities__title {
+    margin: 75px 0 30px 24px;
+}
+
+.opportunities__items {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.opportunities__item {
+    flex: 0 1 33.333%;
+    padding: 25px;
+}
+
+.opportunities__items :hover {
+    outline: 2px solid #EC615B;
+}
+
+.opportunities__item :hover {
+    outline: none;
+}
+
+.item-opportunities__title {
+    font-size: 30px;
+    line-height: 120%;
+    margin: 25px 0px 10px 0px;
+}
+
+.item-opportunities_red {
+    padding: 0px 20px 10px 25px;
+}
+
+.item-opportunities__bg {
+    background-color: #EC615B;
+}
+
+.item-opportunities__title_white {
+    font-size: 30px;
+    line-height: 120%;
+    padding: 45px 0px 10px 18px;
+    color: #FFFFFF;
+}
+
+.item-opportunities__email {
+    padding: 10px;
+    margin-left: 18px;
+    text-align: justify;
+}
+
+.item-opportunities__button {
+    margin-left: 18px;
+    margin-top: 23px;
+    padding-bottom: 40px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.menu__link_blak {
+    color: #000000;
+}
+
+.menu__link-blak:hover {
+    color: #9570f1;
+}
+
+@media (max-width: 1295px) {
+
+    [class*="__container"] {
+        max-width: 1150px;
+    }
+
+    .opportunities__title {
+        margin: 35px 0px 30px 24px;
+    }
+
+    .opportunities__items {
+        justify-content: space-between;
+    }
+
+    .opportunities__item {
+        flex: 0 1 50%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 1125px) {
+
+    .cover__title {
+        font-size: 55px;
+        line-height: 100%;
+    }
+
+    .cover__text {
+        font-size: 18px;
+        line-height: 150%;
+    }
+
+    .button_big {
+        font-size: 25px;
+        line-height: 25px;
+        margin: 40px 0px;
+        padding: 15px 25px;
+    }
+
+    .cover__button img {
+        width: 25px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 967px) {
+    [class*="__container"] {
+        max-width: 750px;
+    }
+
+    .cover__container {
+        padding-left: 10px;
+    }
+
+    .cover__title {
+        font-size: 40px;
+        line-height: 90%;
+    }
+
+    .cover__text {
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    .opportunities__item {
+        flex: 0 1 100%;
+        padding: 20px;
+    }
+
+    .item-opportunities__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item-opportunities__title {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 747px) {
+
+    .cover__container {
+        padding-left: 10px;
+    }
+
+    .cover__title {
+        font-size: 35px;
+        line-height: 90%;
+    }
+
+    .cover__text {
+        font-size: 14px;
+        line-height: 150%;
+    }
+
+    .button_big {
+        font-size: 20px;
+        line-height: 25px;
+        margin: 30px 0px;
+        padding: 12px 20px;
+    }
+
+    .cover__button img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 636px) {
+
+    .cover__image img {
+        object-fit: contain;
+    }
+
+    .opportunities__title {
+        font-size: 45px;
+        line-height: 100%;
+    }
+
+    .menu__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .menu__item {
+        display: flex;
+        flex: 0 1 100%;
+        justify-content: center;
+    }
+}
