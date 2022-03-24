@@ -77,7 +77,7 @@ body {
 @font-face {
     font-family: "Intro";
     src: local("Intro"),
-        url(/assets/fonts/Intro.ttf);
+        url(../fonts/Intro.ttf);
 }
 
 /* ===========================Header====================================== */
@@ -146,7 +146,7 @@ body {
     display: flex;
     align-content: flex-end;
     justify-content: center;
-    background-image: url(/assets/images/background.png);
+    background-image: url(assets/images/background.png);
     background-position: right;
 }
 
