@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <title>Сalculator</title>
     <link rel="stylesheet" href="assets/styles/Normalize.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
@@ -16,8 +16,13 @@
 <body>
     <div Class="wrapper">
         <main>
-            <section class="content__container">
-                <button class="button" onclick=getName()>Кликни меня</button>
+            <section class="calculator__container">
+                <div class="calculator__body">
+                    <button class="calculator__button" onclick=getAddition()>+</button>
+                    <button class="calculator__button" onclick=getSubtraction()>−</button>
+                    <button class="calculator__button" onclick=getMultiplication()>×</button>
+                    <button class="calculator__button" onclick=getDivision()>÷</button>
+                </div>
             </section>
         </main>
     </div>
