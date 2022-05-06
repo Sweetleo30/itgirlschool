@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div Class="wrapper">
+        <main>
+            <section class="welcome__container">
+                <h2 class="welcome__title">Как тебя зовут?</h2>
+                <div class="welcome__element">
+                    <input class="welcome__input-in" type="text">
+                    <button class="welcome__button">✔</button>
+                </div>
+            </section>
+
+            <section class="calculator__container">
+                <div class="calculator__body">
+                    <input class="calculator__num" id="num1" type="text">
+                    <input class="calculator__num" id="num2" type="text">
+                    <button class="calculator__button" id="plus">+</button>
+                    <button class="calculator__button" id="minus">−</button>
+                    <button class="calculator__button" id="times">×</button>
+                    <button class="calculator__button" id="divide">÷</button>
+                    <div class="calculator__result" id="result"></div>
+                </div>
+            </section>
+
+            <section class="div__container">
+                <div class="div__element"></div>
+                <div class="div__element"></div>
+            </section>
+
+            <section class="gallery__container">
+                <button class="gallery__button" onclick="prev()">Prev</button>
+                <img id="slider" src="assets/slider/1.jpg" />
+                <button class="gallery__button" onclick="next()">Next</button>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

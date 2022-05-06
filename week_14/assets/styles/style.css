@@ -1,0 +1,262 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* ================================================================= */
+
+body {
+    font-family: "Open Sans", "Jost", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    background-color: #000000;
+}
+
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1330px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 52px;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1;
+    text-transform: uppercase;
+    text-align: center;
+    color: #02032f;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #ffd223;
+    line-height: 1;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 22px 32px 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+/* ================================================================= */
+
+.welcome__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.welcome__title {
+    margin-bottom: 40px;
+    color: #ffd223;
+    text-align: center;
+    font-size: 44px;
+}
+
+.welcome__input-in {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #585454;
+    color: #ffd223;
+}
+
+.welcome__button {
+    margin-left: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #ffd223;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.welcome__button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.welcome__out {
+    margin-top: 30px;
+    color: #ffd223;
+    font-size: 26px;
+    text-align: center;
+    padding: 0px 50px;
+    background: #000000;
+}
+
+/* =============================Сalculator==================================== */
+
+.calculator__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator__body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 250px;
+    width: 250px;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+
+}
+
+.calculator__button {
+    flex: 0 0 30%;
+    display: inline-block;
+    border-radius: 15px;
+    height: 60px;
+    width: 60px;
+    background-color: #ffd223;
+    line-height: 1;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.calculator__button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+.calculator__out {
+    margin-top: 30px;
+    color: #ffd223;
+    font-size: 26px;
+    text-align: center;
+    padding: 0px 50px;
+    background: #000000;
+}
+
+.calculator__num {
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #585454;
+    color: #ffd223;
+}
+
+.calculator__result {
+    height: 45px;
+    width: 250px;
+    color: #ffd223;
+    text-align: center;
+    background-color: #585454;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* контейнер */
+
+.div__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.div__element {
+    height: 300px;
+    width: 400px;
+    background-color: #ffd223;
+    margin: 40px;
+    cursor: pointer;
+}
+
+/* галерея */
+
+.gallery__container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__container img {
+    width: 700px;
+}
+
+.gallery__button {
+    margin: 40px;
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #ffd223;
+    line-height: 1;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.gallery__button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
