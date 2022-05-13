@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="calculator__container">
+                <div class="calculator__body">
+                    <input class="calculator__num" id="num1" type="text">
+                    <input class="calculator__num" id="num2" type="text">
+                    <button class="calculator__button" id="plus">+</button>
+                    <button class="calculator__button" id="minus">−</button>
+                    <button class="calculator__button" id="times">×</button>
+                    <button class="calculator__button" id="divide">÷</button>
+                    <div class="calculator__result" id="result"></div>
+                    <div class="calculator__warning" id="warning"></div>
+                </div>
+            </section>
+
+            <section class="registration__container">
+                <div class="registration__block">
+                    <h2 class="registration__title">Регистрация</h2>
+                    <form class="registration__form" name="form" onsubmit="return validate()">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="firstname" name="firstname" value=""
+                                placeholder="Имя">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastname" name="lastname" value=""
+                                placeholder="Фамилия">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" autocomplete="username" class="form-control" id="login" name="login"
+                                value="" placeholder="Придумайте логин">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" autocomplete="new-password" class="form-control" id="password"
+                                name="password" value="" placeholder="Придумайте пароль">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" autocomplete="new-password" class="form-control"
+                                id="password_confirm" name="password_confirm" value="" placeholder="Повторите пароль">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="tel" class="form-control" id="phone" name="phone" type="tel" value=""
+                                placeholder="+7 000 000 00 00">
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form__submit">
+                            <button id="button" class="button" disabled="disabled"
+                                type="submit">Зарегистрироваться</button>
+                        </div>
+
+                        <div class="registration__text"><span>Нажимая кнопку «Зарегистрироваться»:</span></div>
+                        <div class="registration__checkbox">
+                            <input type="checkbox" name="accepted" id="accepted" class="checkbox-control">
+                            <label class="checkbox-label" for="accepted">Я принимаю условия
+                                <a href="https://yandex.ru/legal/rules/" target="_blank">Пользовательского
+                                    соглашения</a> и даю своё согласие Яндексу на
+                                обработку моей персональной информации на условиях, определенных <a
+                                    href="https://yandex.ru/legal/confidential/" target="_blank">Политикой
+                                    конфиденциальности</a>.
+                            </label>
+                            <div class="error-message"></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="page" id="page">
+                <div class="page__container">
+                    <div class="page__theme-selection">
+                        <label for="theme">Выбор темы:</label>
+                        <select id="theme" name="theme">
+                            <option value="dark-theme" selected>Темная</option>
+                            <option value="light-theme">Светлая</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
