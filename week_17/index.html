@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="fio__container">
+                <div class="fio__body">
+                    <h2 class="fio__title title">Преобразования ФИО</h2>
+                    <div class="fio__form form-form-group">
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control_big" id="fio" name="fio" value=""
+                                placeholder="Введите ваше ФИО">
+                            <button class="fio__button">✔</button>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="firstname" name="firstname" value=""
+                                placeholder="Имя">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastname" name="lastname" value=""
+                                placeholder="Фамилия">
+
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="patronymic" name="patronymic" value=""
+                                placeholder="Отчество">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="spam__container">
+                <h2 class="spam__title title">Интерфейс для анонимных комментариев</h2>
+                <div class="spam__block">
+                    <div class="spam__block-comments"></div>
+                    <input class="spam__comments" id="comments" type="text">
+                    <button class="spam__button">Отправить</button>
+                </div>
+            </section>
+
+            <section class="date__container">
+                <h2 class="date__title title">Напишите функцию formatDate(date)</h2>
+                <button class="date__btn date__btn_first">прямо сейчас</button>
+                <button class="date__btn date__btn_second">30 сек. назад</button>
+                <button class="date__btn date__btn_third">5 мин. назад</button>
+                <button class="date__btn date__btn_fourth">вчера</button>
+            </section>
+
+            <section class="generator__container">
+                <h2 class="generator__title title">Сделайте генератор 10 случайных чисел</h2>
+                <button class="generator__button">✔</button>
+                <div class="generator-message"></div>
+            </section>
+
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
