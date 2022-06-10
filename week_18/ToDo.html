@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="notes__container">
+                <h2 class="notes__title title">Локальное хранилище заметок </h2>
+                <div class="notes__list" id="notes-list"></div>
+                <div class="notes__input-group">
+                    <input type="text" id="notes-input" class="notes__form-control" placeholder="Действие"></input>
+                    <button class="notes__button button" id="button-add">✔</button>
+                </div>
+                <div class="error-message"></div>
+
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script_ToDo.js"></script>
+</body>
+
+</html>

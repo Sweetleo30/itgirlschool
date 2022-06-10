@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="survey__container">
+                <h2 class="title">Валидация через HTML5</h2>
+                <form class="survey__form">
+
+                    <div class="survey__form-group">
+                        <label class="survey__form-label" for="pet_name">Кличка питомца:</label>
+                        <input class="survey__form-control" type="text" id="pet_name" placeholder="Кличка" required>*
+                    </div>
+
+                    <fieldset>
+                        <legend>Имя и контакты владельца</legend>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="firstName">Имя:</label>
+                            <input class="survey__form-control" type="text" id="firstName" placeholder="Имя"
+                                required />*
+                        </div>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="email">Эл.почта:</label>
+                            <input class="survey__form-control" type="email" id="email" placeholder="Эл.почта"
+                                required>*
+                        </div>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="tel" minlength="10" maxlength="20">Телефон:</label>
+                            <input class="survey__form-control" type="tel" id="tel" placeholder="+79990009900"
+                                pattern="\+?\d+([\(\s\-]?\d+[\)\s\-]?[\d\s\-]+)?" required>*
+                        </div>
+                    </fieldset>
+
+                    <div class="survey__form-group">
+                        <label class="survey__form-label" for="breed">Порода питомца:</label>
+                        <select class="survey__form-select" id="breed" name="breed">
+                            <option value="1">Абиссинская</option>
+                            <option value="2">Бенгальская</option>
+                            <option value="3" selected>Беспородная</option>
+                            <option value="4">Британская короткошерстная</option>
+                            <option value="5">Мейн-кун</option>
+                            <option value="6">Невская маскарадная</option>
+                            <option value="7">Персидская</option>
+                            <option value="8">Сибирская</option>
+                            <option value="9">Сфинкс</option>
+                            <option value="10">Шотландская вислоухая</option>
+                        </select>
+                    </div>
+
+                    <div class="survey__form-group survey__form-group_col">
+                        Чем питается питомец?
+                        <label class="survey__form-label" for="food1"><input class="survey__form-checkbox"
+                                type="checkbox" id="food1">влажный
+                            корм</label>
+                        <label class="survey__form-label" for="food2"><input class="survey__form-checkbox"
+                                type="checkbox" id="food2">натуральный
+                            корм</label>
+                        <label class="survey__form-label" for="food3"><input class="survey__form-checkbox"
+                                type="checkbox" id="food3">сухой
+                            корм</label>
+                    </div>
+
+                    <div class="survey__form-group">
+                        Пол питомца:
+                        <input type="radio" name="gender" value="1" id="male" checked="checked"><label
+                            for="male">cамец</label>
+                        <input type="radio" name="gender" value="2" id="female"><label for="female">cамка</label>
+                    </div>
+
+                    <div class="survey__form-group survey__form-group_col">
+                        <label class="survey__form-label" for="comment">Комментарий владельца:</label>
+                        <textarea id="comment" cols="42" rows="3"></textarea>
+                    </div>
+
+                    <div class="survey__form-file">
+                        <label class="survey__file-button" for="photo">
+                            <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                    src="assets/img/add.png" alt="Выбрать файл" width="25"></span>
+                            <span class="survey__file-button-text">Приложите фото питомца</span>
+                        </label>
+                        <input class="survey__input-file" type="file" id="photo" />
+                    </div>
+
+                    <div>
+                        <button class="survey__btn button">Сохранить</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="registration__container">
+                <div class="registration__message"></div>
+                <h2 class="registration__title title">Валидация регистрации через JS</h2>
+                <div class="registration__block">
+                    <form class="registration__form" name="form" action="" novalidate>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control form-control-name" id="firstname" name="firstname"
+                                value="" placeholder="Имя" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="lastname" name="lastname" value=""
+                                placeholder="Фамилия" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" autocomplete="username" class="form-control form-control-login"
+                                id="login" name="login" value="" minlength="6" maxlength="20"
+                                placeholder="Придумайте логин" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" autocomplete="new-password"
+                                class="form-control form-control-password" id="password" name="password" value=""
+                                placeholder="Придумайте пароль" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" autocomplete="new-password"
+                                class="form-control form-control-password-confirm" id="password_confirm"
+                                name="password_confirm" value="" placeholder="Повторите пароль" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <input autocomplete="tel" class="form-control form-control-phone" id="phone" name="phone"
+                                type="tel" value="" placeholder="+7 000 000 00 00" required>*
+                            <div class="error-message"></div>
+                        </div>
+
+                        <div class="form__submit">
+                            <button id="button" class="registration__btn" disabled="disabled"
+                                type="submit">Зарегистрироваться</button>
+                        </div>
+
+                        <div class="registration__text"><span>Нажимая кнопку «Зарегистрироваться»:</span></div>
+                        <div class="registration__checkbox">
+                            <input type="checkbox" name="accepted" id="accepted" class="checkbox-control">
+                            <label class="checkbox-label" for="accepted">Я принимаю условия
+                                <a href="https://yandex.ru/legal/rules/" target="_blank">Пользовательского
+                                    соглашения</a> и даю своё согласие Яндексу на
+                                обработку моей персональной информации на условиях, определенных <a
+                                    href="https://yandex.ru/legal/confidential/" target="_blank">Политикой
+                                    конфиденциальности</a>.
+                            </label>
+                            <div class="error-message"></div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section class="spam__container">
+                <h2 class="spam__title title">Интерфейс для анонимных комментариев</h2>
+                <div class="spam__block">
+                    <form class="spam__form" action="" onsubmit="return false">
+                        <div class="spam__block-comments"></div>
+                        <div class="spam__form-group">
+                            <label for="comment-name">Имя:*</label>
+                            <input type="name" class="spam__name" name="" id="comment-name" placeholder="Твое имя"
+                                required>
+                        </div>
+                        <div class="spam__form-radio">
+                            <input type="radio" id="avatar_1" name="avatar" class="spam__avatar" value="1">
+                            <label class="radio-label" for="avatar_1"><img src="assets/img/woman.png" alt="woman"
+                                    class="avatar-icon"></label>
+                            <input type="radio" id="avatar_2" name="avatar" class="spam__avatar" value="2">
+                            <label class="radio-label" for="avatar_2"><img src="assets/img/man1.png" alt="man1"
+                                    class="avatar-icon"></label>
+                            <input type="radio" id="avatar_3" name="avatar" class="spam__avatar" value="3">
+                            <label class="radio-label" for="avatar_3"><img src="assets/img/man2.png" alt="man2"
+                                    class="avatar-icon"></label>
+                        </div>
+                        <div class="spam__form-group">
+                            <label for="comments">Комментарии:</label>
+                            <textarea class="spam__comments" id="spam__comments"></textarea>
+                        </div>
+                        <div class="spam__form-group">
+                            <button type="submit" class="spam__button button">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
