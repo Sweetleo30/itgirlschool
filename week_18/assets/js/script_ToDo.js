@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    let errorMessage = document.getElementsByClassName('error-message')[0];
+    let errorMessage = document.getElementsByClassName('notes__error-message')[0];
     let toDoList = [];
 
     if (localStorage.getItem('toDo') != undefined) {
@@ -17,11 +17,12 @@ window.onload = function () {
             return false;
         }
 
-        let array = {};
-        array.toDo = inputVal;
-        array.check = false;
-        let i = toDoList.length;
-        toDoList[i] = array;
+        let toDoItem = {};
+        toDoItem.toDo = inputVal;
+        toDoItem.check = false;
+
+        toDoList.push(toDoItem);
+
         notesList();
 
         localStorage.setItem('toDo', JSON.stringify(toDoList));
@@ -30,7 +31,7 @@ window.onload = function () {
         errorMessage.innerHTML = '';
     }
 
-    checkCheckboxes()
+    checkCheckboxes();
 
     function checkCheckboxes() {
         let checkboxes = document.querySelectorAll('input[type=checkbox]')
@@ -50,7 +51,7 @@ window.onload = function () {
 
         for (let key in toDoList) {
 
-            if (toDoList[key].check == true) {
+            if (toDoList[key].check) {
                 notesList += '<input type="checkbox" class="form-item-input" checked>'
             } else {
                 notesList += '<input type="checkbox" class="form-item-input" >'

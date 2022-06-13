@@ -21,7 +21,7 @@ let inputLogin = document.querySelector('.form-control-login');
 let inputPassword = document.querySelector('.form-control-password');
 let inputPasswordConfirm = document.querySelector('.form-control-password-confirm');
 let inputPhone = document.querySelector('.form-control-phone');
-let errorMessage = document.getElementsByClassName('error-message')[6];
+let errorMessage = document.getElementsByClassName('registration__error-message')[0];
 let errors = [];
 
 function checkValidate(input) {
@@ -62,7 +62,7 @@ function checkAll() {
     formInputs.forEach(function (input) {
         if (input.value === '') {
             input.classList.add('error');
-            errors.push('Поле ' + input.placeholder + ' не заполнено');
+            errors.push(input.placeholder + ' не заполнено');
 
         } else {
             input.classList.remove('error');
@@ -85,7 +85,7 @@ function checkAll() {
     }
 
     if (phoneVal !== '' && !validatePhone(phoneVal)) {
-        errors.push('Недопустимый формат номера');
+        errors.push('Недопустимый формат номера мобильного телефона');
         inputPhone.classList.add('error');
     }
 }
@@ -96,12 +96,13 @@ form.onsubmit = function () {
 
     checkAll()
 
-    if (errors == "") {
+    if (errors.length == 0) {
         document.getElementsByClassName('registration__message')[0].innerHTML = (`Добро пожаловать, ${firstName}!`);
         document.getElementsByClassName('registration__block')[0].style.display = 'none';
         document.getElementsByClassName('registration__title')[0].style.display = 'none';
+        document.getElementsByClassName('registration__error-message')[0].style.display = 'none';
     } else {
-        errorMessage.innerHTML = errors.join('<br>');
+        errorMessage.innerHTML = errors.join('<br><br>');
     }
 
     return false;
@@ -117,9 +118,9 @@ let btnSpam = document.querySelector(".spam__button");
 let inputText = document.querySelector("#spam__comments");
 let comments = [];
 
-let cmtPast = localStorage.getItem('cmt');
-
 document.addEventListener('DOMContentLoaded', function (event) {
+    let cmtPast = localStorage.getItem('cmt');
+
     let name = localStorage.getItem('name');
     let avatar = localStorage.getItem('avatar');
     inputText.value = localStorage.getItem('text');
@@ -155,21 +156,13 @@ function checkSpam(str) {
 
 function addComment() {
     let str = inputComnt.value;
-    let nameVal = inputName.value;
-    let strAdd = checkSpam(str);
 
-    if (strAdd && strAdd !== " ") {
-        comments.push(strAdd);
-        inputComnt.value = '';
-    }
-
-    let html = "";
-
-    block.innerHTML = '';
-
-    if (!comments.length) {
+    if (!str) {
         return;
     }
+
+    let nameVal = inputName.value;
+    let strAdd = checkSpam(str);
 
     let avatarVal;
     let avatarRes;
@@ -202,24 +195,17 @@ function addComment() {
             break;
     }
 
-    comments.forEach((comment) => {
-        html += `
-            <div class="comment-block"><span>${avatarRes}</span><span class='comment-block-name'>${nameVal}: </span><span class='comment-block-comment'>${comment}</span></div>
-        `;
-    });
+    let commentHTML = `
+        <div class="comment-block">
+            <span>${avatarRes}</span>
+            <span class='comment-block-name'>${nameVal}: </span>
+            <span class='comment-block-comment'>${strAdd}</span>
+        </div>`;
 
-    if (cmtPast != undefined || cmtPast != null) {
-        block.innerHTML = cmtPast;
-        block.innerHTML += html;
-    } else {
-        block.innerHTML += html;
-    }
+    block.innerHTML += commentHTML;
 
     localStorage.setItem('cmt', block.innerHTML);
     inputText.value = "";
-
-    console.log(cmtBlock);
-    console.log(block);
 }
 
 btnSpam.onclick = addComment;

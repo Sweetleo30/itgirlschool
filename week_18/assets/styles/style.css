@@ -11,6 +11,7 @@ a {
     text-decoration: none;
 }
 
+
 ul,
 ol,
 li {
@@ -99,7 +100,13 @@ body {
     opacity: 1;
 }
 
+a {
+    color: rgb(255, 0, 132);
+}
 
+a:visited {
+    color: #cecece;
+}
 
 /* ===========================formatDate(date)====================================== */
 
@@ -148,7 +155,7 @@ body {
 /* ===============================ВАЛИДАЦИЯ ЧЕРЕЗ HTML5============================================ */
 
 .survey__container {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -302,12 +309,29 @@ body {
     justify-content: flex-start;
     align-items: center;
     color: #ffd223;
+    position: relative;
 }
 
+/* .registration__title {
+    margin-top: 30px;
+} */
+
 .registration__message {
+    position: absolute;
+    left: 30%;
+    top: 30%;
     font-size: 40px;
     text-align: center;
     margin: 50px 0 30px 0;
+}
+
+.registration__error-message {
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    font-size: 16px;
+    color: red;
+    max-width: 300px;
 }
 
 .registration__block {
@@ -322,8 +346,15 @@ body {
 
 .form-group {
     display: flex;
-    margin-bottom: 0px;
-    width: 310px;
+    flex-direction: column;
+    margin-bottom: 15px;
+    /* width: 310px; */
+}
+
+.reg-form-label {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ffd323c0;
 }
 
 .error-message {
@@ -543,7 +574,7 @@ body {
     cursor: pointer;
 }
 
-.error-message {
+.notes__error-message {
     display: flex;
     justify-content: flex-start;
     color: red;

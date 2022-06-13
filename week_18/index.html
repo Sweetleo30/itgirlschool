@@ -104,46 +104,52 @@
 
             <section class="registration__container">
                 <div class="registration__message"></div>
+                <div class="registration__error-message"></div>
                 <h2 class="registration__title title">Валидация регистрации через JS</h2>
                 <div class="registration__block">
                     <form class="registration__form" name="form" action="" novalidate>
-
                         <div class="form-group">
+                            <label class="reg-form-label" for="firstname">Имя</label>
                             <input type="text" class="form-control form-control-name" id="firstname" name="firstname"
-                                value="" placeholder="Имя" required>*
+                                value="" placeholder="Имя" required>
                             <div class="error-message"></div>
                         </div>
 
                         <div class="form-group">
+                            <label class="reg-form-label" for="lastname">Фамилия</label>
                             <input type="text" class="form-control" id="lastname" name="lastname" value=""
-                                placeholder="Фамилия" required>*
+                                placeholder="Фамилия" required>
                             <div class="error-message"></div>
                         </div>
 
                         <div class="form-group">
+                            <label class="reg-form-label" for="login">Придумайте логин</label>
                             <input type="text" autocomplete="username" class="form-control form-control-login"
                                 id="login" name="login" value="" minlength="6" maxlength="20"
-                                placeholder="Придумайте логин" required>*
+                                placeholder="Придумайте логин" required>
                             <div class="error-message"></div>
                         </div>
 
                         <div class="form-group">
+                            <label class="reg-form-label" for="password">Придумайте пароль</label>
                             <input type="password" autocomplete="new-password"
                                 class="form-control form-control-password" id="password" name="password" value=""
-                                placeholder="Придумайте пароль" required>*
+                                placeholder="Придумайте пароль" required>
                             <div class="error-message"></div>
                         </div>
 
                         <div class="form-group">
+                            <label class="reg-form-label" for="password_confirm">Повторите пароль</label>
                             <input type="password" autocomplete="new-password"
                                 class="form-control form-control-password-confirm" id="password_confirm"
-                                name="password_confirm" value="" placeholder="Повторите пароль" required>*
+                                name="password_confirm" value="" placeholder="Повторите пароль" required>
                             <div class="error-message"></div>
                         </div>
 
                         <div class="form-group">
+                            <label class="reg-form-label" for="phone">Номер мобильного телефона</label>
                             <input autocomplete="tel" class="form-control form-control-phone" id="phone" name="phone"
-                                type="tel" value="" placeholder="+7 000 000 00 00" required>*
+                                type="tel" value="" placeholder="Номер мобильного телефона" required>
                             <div class="error-message"></div>
                         </div>
 
@@ -162,7 +168,6 @@
                                     href="https://yandex.ru/legal/confidential/" target="_blank">Политикой
                                     конфиденциальности</a>.
                             </label>
-                            <div class="error-message"></div>
                         </div>
                     </form>
                 </div>
