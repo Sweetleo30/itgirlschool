@@ -1,9 +1,8 @@
 // 2. Напишите класс Cat со свойствами
 
 let inputs = document.querySelectorAll('.survey__form-control');
-let breed = document.querySelectorAll('.survey__form-select');
+let inputBreed = document.querySelectorAll('.survey__form-select');
 let radioCheck = document.querySelectorAll('.radio-control');
-let food = document.querySelectorAll('.survey__form-checkbox');
 let button = document.querySelector('.survey__btn');
 let arr;
 
@@ -15,8 +14,8 @@ button.onclick = function () {
         arr.push(input.value);
     }
 
-    for (let i = 0; i < breed.length; i++) {
-        let selecetedBreed = breed[i].options[breed[i].selectedIndex];
+    for (let i = 0; i < inputBreed.length; i++) {
+        let selecetedBreed = inputBreed[i].options[inputBreed[i].selectedIndex];
         arr.push(selecetedBreed.value);
     }
 
@@ -38,11 +37,18 @@ button.onclick = function () {
         }
     }
 
-    let cat = new Cat(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6]);
+    let petName = arr[0];
+    let firstName = arr[1];
+    let email = arr[2];
+    let tel = arr[3];
+    let breed = arr[4];
+    let food = arr[5];
+    let gender = arr[6];
+
+    let cat = new Cat(petName, firstName, email, tel, breed, food, gender);
 
     console.log(cat);
 };
-
 
 // 3. Калькулятор
 
@@ -58,57 +64,58 @@ let warning = document.getElementById('warning');
 let x;
 let y;
 
-function clearInputs() {
-    num1.value = '';
-    num2.value = '';
-}
-
-function getValues() {
-    x = +num1.value;
-    y = +num2.value;
-}
-
 class Сalculator {
 
-    static isPlus() {
+    static addPlus() {
         result.innerHTML = (`${x} + ${y} = ${x + y}`);
     }
 
-    static isMinus() {
+    static addMinus() {
         result.innerHTML = (`${x} - ${y} = ${x - y}`);
     }
 
-    static isTimes() {
+    static addTimes() {
         result.innerHTML = (`${x} × ${y} = ${x * y}`);
     }
 
-    static isDivide() {
+    static addDivide() {
         if (y == 0) {
+            result.innerHTML = (`Ошибка`);
             return warning.innerHTML = ("На ноль делить нельзя!");
         }
         warning.innerHTML = "";
         result.innerHTML = (`${x} ÷ ${y} = ${x / y}`);
     }
+
+    static getValues() {
+        x = +num1.value;
+        y = +num2.value;
+    }
+
+    static clearInputs() {
+        num1.value = '';
+        num2.value = '';
+    }
 }
 
 plus.onclick = function () {
-    Сalculator.isPlus(getValues());
-    clearInputs();
+    Сalculator.addPlus(Сalculator.getValues());
+    Сalculator.clearInputs();
 }
 
 minus.onclick = function () {
-    Сalculator.isMinus(getValues());
-    clearInputs();
+    Сalculator.addMinus(Сalculator.getValues());
+    Сalculator.clearInputs();
 }
 
 times.onclick = function () {
-    Сalculator.isTimes(getValues());
-    clearInputs();
+    Сalculator.addTimes(Сalculator.getValues());
+    Сalculator.clearInputs();
 }
 
 divide.onclick = function () {
-    Сalculator.isDivide(getValues());
-    clearInputs();
+    Сalculator.addDivide(Сalculator.getValues());
+    Сalculator.clearInputs();
 }
 
 
