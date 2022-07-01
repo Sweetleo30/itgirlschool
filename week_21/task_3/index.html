@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="survey__container">
+
+                <h2 class="title">Опрос владельцев кошек</h2>
+                <!-- <form id="form" method="post" action="https://httpbin.org/post" class="survey__form"> -->
+                <form id="form" class="survey__form">
+
+                    <div class="survey__form-group">
+                        <label class="survey__form-label" for="pet_name">Кличка питомца:</label>
+                        <input class="survey__form-control" type="text" id="pet_name" name="pet_name"
+                            placeholder="Кличка" required>*
+                    </div>
+
+                    <fieldset>
+                        <legend>Имя и контакты владельца</legend>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="firstName">Имя:</label>
+                            <input class="survey__form-control" type="text" id="firstName" name="owner_name"
+                                placeholder="Имя" required />*
+                        </div>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="email">Эл.почта:</label>
+                            <input class="survey__form-control" type="email" id="email" name="email"
+                                placeholder="Эл.почта" required>*
+                        </div>
+
+                        <div class="survey__form-group">
+                            <label class="survey__form-label" for="tel" minlength="10" maxlength="20">Телефон:</label>
+                            <input class="survey__form-control" type="tel" id="tel" name="tel"
+                                placeholder="+79990009900" pattern="\+?\d+([\(\s\-]?\d+[\)\s\-]?[\d\s\-]+)?" required>*
+                        </div>
+                    </fieldset>
+
+                    <div class="survey__form-group">
+                        <label class="survey__form-label" for="breed">Порода питомца:</label>
+                        <select class="survey__form-select" id="breed" name="breed">
+                            <option value="Абиссинская">Абиссинская</option>
+                            <option value="Бенгальская">Бенгальская</option>
+                            <option value="Беспородная" selected>Беспородная</option>
+                            <option value="Британская короткошерстная">Британская короткошерстная</option>
+                            <option value="Мейн-кун">Мейн-кун</option>
+                            <option value="Невская маскарадная">Невская маскарадная</option>
+                            <option value="Персидская">Персидская</option>
+                            <option value="Сибирская">Сибирская</option>
+                            <option value="Сфинкс">Сфинкс</option>
+                            <option value="Шотландская вислоухая">Шотландская вислоухая</option>
+                        </select>
+                    </div>
+
+                    <div class="survey__form-group survey__form-group_col">
+                        Чем питается питомец?
+                        <label class="survey__form-label" for="food1"><input class="radio-control" type="radio"
+                                value="влажный корм" id="food1" name="food">влажный
+                            корм</label>
+                        <label class="survey__form-label" for="food2"><input class="radio-control" type="radio"
+                                id="food2" value="натуральный корм" name="food" checked="checked">натуральный
+                            корм</label>
+                        <label class="survey__form-label" for="food3"><input class="radio-control" type="radio"
+                                id="food3" value="сухой корм" name="food">сухой
+                            корм</label>
+                    </div>
+
+                    <div class="survey__form-group">
+                        Пол питомца:
+                        <input type="radio" class="radio-control" name="gender" value="cамец" id="male"
+                            checked="checked"><label for="male">cамец</label>
+                        <input type="radio" class="radio-control" name="gender" value="cамка" id="female"><label
+                            for="female">cамка</label>
+                    </div>
+
+                    <div class="survey__form-group survey__form-group_col">
+                        <label class="survey__form-label" for="comment">Комментарий владельца:</label>
+                        <textarea id="comment" name="comment" cols="42" rows="3"></textarea>
+                    </div>
+
+                    <div class="survey__form-file">
+                        <label class="survey__file-button" for="photo">
+                            <span class="input__file-icon-wrapper"><img class="input__file-icon"
+                                    src="assets/img/add.png" alt="Выбрать файл" width="25"></span>
+                            <span class="survey__file-button-text">Приложите фото питомца</span>
+                        </label>
+                        <input class="survey__input-file" type="file" name="photo" id="photo" />
+                    </div>
+
+                    <div>
+                        <button type="submit" class="survey__btn button">Сохранить</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
