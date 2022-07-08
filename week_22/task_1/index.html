@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/styles/Normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <main>
+            <section class="weather__container">
+                <h2 class="title">Погода</h2>
+
+                <div class="weather__content">
+                    <div class="weather__error"></div>
+                    <div class="weather__block block-weather">
+                        <div class="block-weather__item">
+                            <span class="city">Город</span>
+                            <span class="temp-value"></span>
+                        </div>
+                    </div>
+                    <div class="weather__block block">
+                        <div class="block__item">Влажность<span class="humidity"></span></div>
+                        <div class="block__item">Давление<span class="pressure"></span><span class="text">мм
+                                рт.ст</span></div>
+                        <div class="block__item">Облачность<span class="cloudiness"></span></div>
+                        <div class="block__item">Ветер<span class="wind"></span><span class="text">м/с</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
