@@ -1,0 +1,8 @@
+.footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    border: 3px solid #f8ab37;
+}
