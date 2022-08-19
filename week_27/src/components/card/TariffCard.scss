@@ -1,0 +1,89 @@
+.card {
+    flex: 1 1 25%;
+    padding: 16px 1px;
+    text-align: center;
+}
+
+.card-item {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+
+    &:nth-child(1) {
+        border-bottom: 1px solid #f8f8f8;
+    }
+
+    &:nth-child(3) {
+        background-color: #f8f8f8;
+    }
+
+    &:last-child {
+        background-color: #eeeeee;
+    }
+
+    /* тема тарифа 300 */
+    &:nth-child(1) {
+        font-size: 18px;
+        color: #d0e7ed;
+        background-color: #229cab;
+    }
+
+    &:nth-child(2) {
+        color: #eefeff;
+        background-color: #2cc1d5;
+    }
+}
+
+.price {
+    font-size: 40px;
+    padding: 0 5px;
+}
+
+
+/* тема тарифа 450 */
+
+/* .card-item:nth-child(1) {
+    font-size: 18px;
+    color: #e0f9f3;
+    background-color: #1f8972;
+}
+
+.card-item:nth-child(2) {
+    color: #eefeff;
+    background-color: #24ae8d;
+} */
+
+/* ================== */
+
+/* тема тарифа 550 */
+
+/* .card-item:nth-child(1) {
+    font-size: 18px;
+    color: #ffe8da;
+    background-color: #c4554e;
+}
+
+.card-item:nth-child(2) {
+    color: #eefeff;
+    background-color: #f46a5f;
+} */
+
+/* ================== */
+
+/* тема тарифа 1000 */
+
+/* .card-item:nth-child(1) {
+    font-size: 18px;
+    color: #d8dae5;
+    background-color: #282f37;
+}
+
+.card-item:nth-child(2) {
+    color: #eefeff;
+    background-color: #333a44;
+} */
+
+/* ================== */

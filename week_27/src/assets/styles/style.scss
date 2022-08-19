@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* ==========================переменные======================================= */
+
+$body-bg: #e2dfdf;
+$text-color: #a0a0a0;
+$fontSize: 14px;
+$fontFamily: 'Rubik',
+sans-serif;
+$fontWeight: 400;
+
+/* ================================================================= */
+
+body {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+#root {
+    height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}
+
+.title {
+    margin: 20px 0 40px;
+    font-weight: 900;
+    font-size: calc(18px + 2vmin);
+    font-style: normal;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #f8ab37;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 50px;
+    background-color: #ffd223;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 16px 22px 14px;
+    line-height: 1;
+    font-weight: 600;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: #000000;
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+.button:hover {
+    transition: 0.3s;
+    opacity: 1;
+}
+
+a {
+    color: rgb(255, 0, 132);
+}
+
+a:visited {
+    color: #cecece;
+}
