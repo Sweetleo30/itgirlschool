@@ -1,0 +1,15 @@
+.green {
+
+    /* тема green тарифа 450 */
+
+    &:nth-child(1) {
+        font-size: 18px;
+        color: #e0f9f3;
+        background-color: #1f8972;
+    }
+
+    &:nth-child(2) {
+        color: #eefeff;
+        background-color: #24ae8d;
+    }
+}

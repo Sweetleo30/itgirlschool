@@ -1,13 +1,17 @@
 import './TariffCard.scss';
+import './turquoise.scss';
+import './green.scss';
+import './red.scss';
+import './dark.scss';
 
-function TariffCard(props) {
+export function TariffCard(props) {
     return (
-        <div className="card">
-            <div className="card-item">
+        <div className={"card " + (props.isSelected ? "selected" : "")}>
+            <div className={"card-item " + props.theme}>
                 <span className="tariff">{props.tariff}</span>
             </div>
-            <div className="card-item">
-                <span>руб</span>
+            <div className={"card-item " + props.theme}>
+                <span className="price">руб</span>
                 <span className="price">{props.price}</span>
                 <span>/мес</span>
             </div>
@@ -20,5 +24,3 @@ function TariffCard(props) {
         </div>
     );
 }
-
-export default TariffCard;
