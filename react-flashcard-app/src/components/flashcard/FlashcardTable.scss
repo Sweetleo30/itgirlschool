@@ -2,13 +2,12 @@
 
 .flashcard-table__container {
     @include flexbox-center;
-    width: 700px;
+    width: 1000px;
     border-radius: 6px;
     background-color: $bg-table;
 }
 
 .table {
-    color: #d0d0d0;
     text-align: center;
     padding: 30px 10px;
 }
@@ -17,7 +16,6 @@ th {
     padding: 12px;
     background-color: $bg-table-th;
     border-radius: 8px;
-    font-weight: 400;
 }
 
 td {
@@ -41,4 +39,20 @@ td {
 .bt-delete {
     @include button;
     @include button-bg($bt-red);
+}
+
+.form-control {
+    min-height: 30px;
+    min-width: 60px;
+    color: $mainColor;
+    background-color: #5854543b;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+
+    &:focus {
+        outline: none;
+        border: 1px solid $bt-green;
+        box-shadow: 0 0 10px $bt-green;
+    }
 }
