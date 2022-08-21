@@ -1,0 +1,44 @@
+@import '../../assets/styles/variables.scss';
+
+.flashcard-table__container {
+    @include flexbox-center;
+    width: 700px;
+    border-radius: 6px;
+    background-color: $bg-table;
+}
+
+.table {
+    color: #d0d0d0;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+th {
+    padding: 12px;
+    background-color: $bg-table-th;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+td {
+    padding: 6px 10px;
+    background-color: $bg-table-td;
+    border-radius: 8px;
+}
+
+.bt-save {
+    text-transform: uppercase;
+    @include button;
+    @include button-bg($bt-green);
+}
+
+.bt-edit {
+    @include button;
+    @include button-bg($bt-orange);
+
+}
+
+.bt-delete {
+    @include button;
+    @include button-bg($bt-red);
+}

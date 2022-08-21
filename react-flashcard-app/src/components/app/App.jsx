@@ -1,8 +1,9 @@
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import '../../assets/styles/style.css';
-import './App.css';
+import { FlashcardTable } from '../flashcard/FlashcardTable';
+
+import './App.scss';
 
 
 function App() {
@@ -11,9 +12,13 @@ function App() {
             <Header></Header>
             <div className="main">
                 <h2 className="title">Main!</h2>
+
+                <FlashcardTable></FlashcardTable>
+
+
             </div>
             <Footer></Footer>
-        </div>
+        </div >
     );
 }
 
