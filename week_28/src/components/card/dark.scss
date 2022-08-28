@@ -1,0 +1,15 @@
+.dark {
+
+    /* тема dark тарифа 1000 */
+
+    &:nth-child(1) {
+        font-size: 18px;
+        color: #d8dae5;
+        background-color: #282f37;
+    }
+
+    &:nth-child(2) {
+        color: #eefeff;
+        background-color: #333a44;
+    }
+}

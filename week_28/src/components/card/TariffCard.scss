@@ -1,0 +1,48 @@
+.card {
+    flex: 1 1 25%;
+    padding: 16px 1px;
+    text-align: center;
+}
+
+.card-item {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px;
+    text-align: center;
+
+    &:nth-child(1) {
+        border-bottom: 1px solid #f8f8f8;
+    }
+
+    &:nth-child(2) {
+        padding: 40px 0;
+    }
+
+    &:nth-child(3) {
+        background-color: #f8f8f8;
+    }
+
+    &:last-child {
+        background-color: #eeeeee;
+    }
+}
+
+.price {
+
+    &:nth-child(1) {
+        align-self: flex-start;
+    }
+
+    &:nth-child(2) {
+        font-size: 40px;
+        padding: 0 5px;
+        line-height: 1;
+    }
+}
+
+.selected {
+    transform: scale(1.1);
+    padding: 0 11px;
+}

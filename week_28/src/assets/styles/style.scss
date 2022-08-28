@@ -1,0 +1,74 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+html,
+body {
+    height: 100%;
+    line-height: 1;
+}
+
+/* ==========================переменные======================================= */
+
+$body-bg: #e2dfdf;
+$text-color: #858585;
+$fontSize: 14px;
+$fontFamily: 'Rubik',
+sans-serif;
+$fontWeight: 400;
+
+/* ================================================================= */
+
+body {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: $fontWeight;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $text-color;
+    background-color: $body-bg;
+}
+
+#root {
+    height: 100%;
+}
+
+.main {
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 900px;
+    margin: 0px auto;
+    padding: 0px 15px;
+}

@@ -1,0 +1,15 @@
+.red {
+
+    /* тема red тарифа 550 */
+
+    &:nth-child(1) {
+        font-size: 18px;
+        color: #ffe8da;
+        background-color: #c4554e;
+    }
+
+    &:nth-child(2) {
+        color: #eefeff;
+        background-color: #f46a5f;
+    }
+}
