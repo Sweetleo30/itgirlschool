@@ -1,21 +1,17 @@
+import './App.scss';
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import { FlashcardTable } from '../flashcard/FlashcardTable';
-
-import './App.scss';
-
+import { FlashcardContent } from '../flashcard/FlashcardContent';
 
 function App() {
     return (
         <div className="wrapper">
             <Header></Header>
             <div className="main">
-                <h2 className="title">Main!</h2>
-
                 <FlashcardTable></FlashcardTable>
-
-
+                <FlashcardContent></FlashcardContent>
             </div>
             <Footer></Footer>
         </div >
