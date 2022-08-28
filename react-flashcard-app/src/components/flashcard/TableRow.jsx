@@ -17,13 +17,13 @@ export function TableRow(props) {
         <tr>
             <td scope="row">{props.id}</td>
             <td>
-                {isEdited ? <input type="text" className="form-control" name="word" value="" /> : props.word}
+                {isEdited ? <input type="text" className="form-control" name="word" /> : props.word}
             </td>
             <td>
-                {isEdited ? <input type="text" className="form-control" name="transcription" value="" /> : props.transcription}
+                {isEdited ? <input type="text" className="form-control" name="transcription" /> : props.transcription}
             </td>
             <td>
-                {isEdited ? <input type="text" className="form-control" name="translation" value="" /> : props.translation}
+                {isEdited ? <input type="text" className="form-control" name="translation" /> : props.translation}
             </td>
             <td>
                 {isEdited ? <button className="bt-save" onClick={handleChange}>SAVE</button> :
