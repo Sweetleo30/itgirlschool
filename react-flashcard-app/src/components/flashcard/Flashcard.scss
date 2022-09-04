@@ -11,8 +11,8 @@
     @include flexbox-center;
     flex-direction: column;
     margin: 10px;
-    width: 18vh;
-    height: 24vh;
+    width: 180px;
+    height: 230px;
     background-color: $bg-card;
     color: $cardColor;
     border-radius: 15px;
@@ -45,6 +45,7 @@
 
 .translation-btn {
     margin: 40px 10px 0 10px;
+    padding: 8px 0;
     font-size: 20px;
     background-color: rgba(255, 255, 255, 0);
     color: #da2c4d;

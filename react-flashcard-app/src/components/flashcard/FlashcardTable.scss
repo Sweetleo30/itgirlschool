@@ -2,8 +2,9 @@
 
 .flashcard-table__container {
     @include flexbox-center;
+    padding: 0 10px 100px 10px;
     border-radius: 6px;
-    background-color: $bg-table;
+    // background-color: $bg-table;
 }
 
 .table {
