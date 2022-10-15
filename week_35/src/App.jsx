@@ -7,12 +7,15 @@ function App() {
   const [comments, setComments] = useState([])
 
   const addComments = (userInput) => {
+    userInput = userInput.replace(/viagra/ig, "***")
+    userInput = userInput.replace(/XXX/ig, "***")
+
     if (userInput) {
       const newItem = {
         id: Math.random().toString(36).substring(2, 9),
         comment: userInput,
       }
-      setComments([...comments, newItem])
+      setComments([newItem, ...comments])
     }
   }
 

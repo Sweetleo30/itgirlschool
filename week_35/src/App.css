@@ -113,7 +113,7 @@ body {
 
 .spam__block-comments {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   flex: 1 1 400px;
   width: 100%;
   background-color: #5854544d;
@@ -181,6 +181,6 @@ body {
   overflow: hidden;
 }
 
-.item-comment:last-child {
+.item-comment:first-child {
   background-color: #4d687f66;
 }
